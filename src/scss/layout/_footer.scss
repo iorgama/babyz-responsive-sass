@@ -1,0 +1,124 @@
+footer {
+  background-color: $color-theme-01;
+  @include for-size(tablet-landscape-up) {
+    margin-top: 50px;
+  }
+  > .container {
+    flex-wrap: wrap;
+    h4 {
+      font-size: $font-size-base;
+      text-transform: uppercase;
+      color: $color-theme-03;
+      text-align: center;
+      @include for-size(desktop-up) {
+        text-align: left;
+      }
+    }
+
+    li {
+      font-size: $font-size-sm;
+      font-weight: bold;
+      text-align: center;
+      @include for-size(desktop-up) {
+        text-align: left;
+      }
+    }
+
+    a {
+      &:visited {
+        color: $color-theme-02;
+      }
+    }
+
+    > .links {
+      order: 1;
+      flex: 1 1 300px;
+
+      > .links-box {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          flex: 50%;
+          margin-bottom: 20px;
+          > .item {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    > .subscribe {
+      flex: 2 1 400px;
+      order: 3;
+      margin: 20px;
+      @include for-size(desktop-up) {
+        order: 2;
+      }
+      .subscribe-form {
+        input[type='email'] {
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid $color-theme-02;
+          float: left;
+          width: 80%;
+          background: $color-theme-01;
+          color: $color-theme-02;
+          font-size: $font-size-sm;
+          &::placeholder {
+            color: $color-theme-02;
+          }
+        }
+
+        button {
+          float: left;
+          width: 20%;
+          padding: 10px;
+          background: $color-theme-01;
+          color: $color-theme-02;
+          font-size: $font-size-sm;
+          border: none;
+          border-bottom: 2px solid $color-theme-02;
+          cursor: pointer;
+          text-transform: uppercase;
+
+          &:hover {
+            background: $color-theme-02;
+            color: $color-theme-03;
+          }
+        }
+
+        &:after {
+          content: '';
+          clear: both;
+        }
+      }
+    }
+
+    > .social {
+      flex: 1 1 150px;
+      margin-left: 20px;
+      order: 2;
+      @include for-size(desktop-up) {
+        order: 3;
+      }
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  > .copyright {
+    height: 30px;
+    display: flex;
+    background-color: $color-theme-02;
+    align-items: center;
+
+    p {
+      flex: 1;
+      text-align: center;
+      font-size: $font-size-sm;
+      font-weight: bold;
+      color: $color-theme-03;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+// Font families
+$base-font-family: 'PT Sans', Arial, sans-serif;
+$alt-font-family: 'Playfair Display', Arial, sans-serif;
+$fa-font-path: '../webfonts';
+
+$font-size-base: 1.25em; //20px
+$font-size-lg: 3em; //48px
+$font-size-md: 2.25em; //36px
+$font-size-sm: 0.875em; //14px
+
+$line-size-sm: 1.25em;
+$line-size-md: 2em;

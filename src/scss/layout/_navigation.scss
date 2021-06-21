@@ -1,0 +1,113 @@
+.menu-header {
+  background: $color-theme-03;
+  padding: 10px 0;
+  display: none;
+  @include for-size(tablet-landscape-up) {
+    display: block;
+  }
+  > .box {
+    align-items: center;
+    justify-content: space-around;
+
+    > .logo {
+      img {
+        width: 150px;
+      }
+    }
+    > .nav {
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          padding: 20px 10px;
+          a {
+            color: $color-theme-02;
+            font-size: $font-size-base;
+            transition: all 0.5s ease-in-out;
+            position: relative;
+            text-transform: uppercase;
+
+            &::before {
+              @include pseudo($pos: absolute, $content: attr(data-item));
+              transition: 0.5s;
+              color: $color-theme-01;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 0;
+              overflow: hidden;
+            }
+            &:hover {
+              &::before {
+                width: 100%;
+                transition: all 0.5s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .icons {
+      i {
+        font-size: $font-size-base;
+        color: $color-theme-02;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  overflow: hidden;
+  background-color: $color-theme-03;
+  position: relative;
+  @include for-size(tablet-landscape-up) {
+    display: none;
+  }
+  display: flex;
+  justify-content: space-between;
+
+  > .mobile-logo {
+    img {
+      width: 100px;
+    }
+  }
+
+  > #mobile-links {
+    display: none;
+
+    &.toggle {
+      display: block;
+      text-align: center;
+
+      a {
+        &:hover {
+          color: $color-theme-01;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $color-theme-02;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: $font-size-md;
+    display: block;
+  }
+
+  > .mobile-icon {
+    background: $color-theme-03;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      background-color: $color-theme-01;
+      color: $color-theme-03;
+    }
+  }
+}

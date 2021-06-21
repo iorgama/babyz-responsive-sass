@@ -1,0 +1,19 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: $color-theme-02 !important;
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: $font-size-sm;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .swiper-pagination-bullet-active {
+    background: $color-theme-02;
+  }
+}
