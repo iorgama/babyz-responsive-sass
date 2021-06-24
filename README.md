@@ -6,4 +6,4 @@
 - SASS
 
 # URL do Projeto:
-[Projeto](https://iorgama.github.io/babyz-responsive-sass/)
+[Projeto Responsivo](https://iorgama.github.io/babyz-responsive-sass/)
